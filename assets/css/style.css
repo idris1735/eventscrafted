@@ -142,7 +142,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.border-radius{
+.border-radius {
   border-radius: 10px;
 }
 
@@ -157,7 +157,6 @@ body {
   transform: scale(1.05); /* Slight zoom effect on hover */
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
-
 
 iframe {
   border: none;
@@ -19352,6 +19351,52 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
+.feature-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-content h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.feature-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.feature-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.feature-image {
+  margin-top: 20px;
+}
+
+.feature-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .feature-list-tab {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+}
+
 /* Feature 2 --------------------------------- */
 .feature-list {
   /* Medium devices */
@@ -19957,11 +20002,9 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
-
-
 /* Gold text stroke with animation */
 .gold-stroke {
-  font-family: "Poppins", sans-serif; /* Ensure a stylish font */
+  font-family: 'Poppins', sans-serif; /* Ensure a stylish font */
   font-size: 4rem; /* Adjust size as needed */
   color: #d4ad5e; /* Gold fill color */
   text-stroke: 2px #ffd700; /* Gold stroke outline */
@@ -20012,7 +20055,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 /* Slide-in animation */
-[data-ani="slideinup"] {
+[data-ani='slideinup'] {
   opacity: 0;
   transform: translateY(20px);
   animation: slideInUp 1s forwards;
@@ -20035,5 +20078,215 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
-
 /*# sourceMappingURL=style.css.map */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+.speakers-sec {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sub-title {
+  font-size: 18px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sub-title img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.sec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.speakers-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.speaker-card {
+  flex: 1;
+  max-width: 600px; /* Increased from previous max-width */
+  width: 100%;
+  padding: 40px; /* Increased padding for more space */
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 30px; /* Center cards and add bottom margin */
+}
+
+.speaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .speaker-card {
+    max-width: 100%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .speaker-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .speaker-card {
+    padding: 20px;
+  }
+}
+
+/* Ensure the parent container allows for proper card layout */
+.speakers-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.speaker-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.speaker-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.speaker-content p {
+  margin-bottom: 15px;
+}
+
+.speakers-image {
+  flex: 1;
+  text-align: center;
+  align-self: center;
+}
+
+.speakers-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.speakers-image img:hover {
+  transform: scale(1.05);
+}
+
+.arrow-right,
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-right {
+  right: -50px;
+}
+
+.arrow-left {
+  left: -50px;
+}
+
+.arrow-right svg,
+.arrow-left svg {
+  width: 100px;
+  height: 100px;
+}
+
+.arrow-right path,
+.arrow-left path {
+  stroke: #3498db;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw 2s linear forwards infinite;
+}
+
+.arrow-right polygon,
+.arrow-left polygon {
+  fill: #3498db;
+  opacity: 0;
+  animation: fade 2s linear forwards infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade {
+  0%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .speakers-wrap {
+    flex-direction: column;
+  }
+
+  .speaker-card {
+    margin-bottom: 30px;
+  }
+
+  .arrow-right,
+  .arrow-left {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-title {
+    font-size: 36px;
+  }
+
+  .speaker-name {
+    font-size: 24px;
+  }
+
+  .speaker-content {
+    font-size: 14px;
+  }
+}
